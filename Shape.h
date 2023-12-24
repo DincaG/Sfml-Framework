@@ -40,7 +40,7 @@ private:
     sf::IntRect        m_textureRect;     
     sf::Color          m_fillColor;       
     sf::Color          m_outlineColor;    
-    float          m_outlineThickness;
+    float              m_outlineThickness;
     sf::VertexArray    m_vertices;        
     sf::VertexArray    m_outlineVertices; 
     sf::FloatRect      m_insideBounds;    

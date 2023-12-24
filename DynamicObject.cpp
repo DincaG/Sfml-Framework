@@ -1,7 +1,7 @@
 #include "DynamicObject.h"
 
 DynamicObject::DynamicObject(const sf::Vector2f& size)
-    : RoundedRectangleShape{ size }
+    : RoundedRectangle{ size }
     , parentObject{ nullptr }
     , objectType{ ParentObjectType::None }
     , relativePosition{ 0.f, 0.f }
@@ -14,7 +14,7 @@ DynamicObject::DynamicObject(const sf::Vector2f& size)
 
 void DynamicObject::setSize(const sf::Vector2f& size)
 {
-	RoundedRectangleShape::setSize(size);
+	RoundedRectangle::setSize(size);
 	setOrigin(getLocalBounds().width / 2.f, getLocalBounds().height / 2.f);
 }
 
@@ -25,7 +25,7 @@ void DynamicObject::setRelativePosition(float percentageX, float percentageY)
 
 void DynamicObject::setRelativePosition(const sf::Vector2f& percentage)
 {
-	RoundedRectangleShape::setPosition(0.f, 0.f);
+	RoundedRectangle::setPosition(0.f, 0.f);
 	relativePosition = percentage;
 	dynamicallyPositioned = true;
 }
@@ -37,7 +37,7 @@ void DynamicObject::setPosition(float x, float y)
 
 void DynamicObject::setPosition(const sf::Vector2f& position)
 {
-	RoundedRectangleShape::setPosition(position);
+	RoundedRectangle::setPosition(position);
 	dynamicallyPositioned = false;
 }
 
@@ -114,7 +114,7 @@ sf::Vector2f DynamicObject::getGlobalPosition() const
 
 sf::Vector2f DynamicObject::getPosition() const
 {
-    return RoundedRectangleShape::getPosition();
+    return RoundedRectangle::getPosition();
 }
 
 sf::Vector2f DynamicObject::getScale() const
@@ -134,7 +134,7 @@ sf::FloatRect DynamicObject::getGlobalBounds() const
 
 sf::Transform DynamicObject::getTransform() const
 {
-	sf::Transform transform{ RoundedRectangleShape::getTransform() };
+	sf::Transform transform{ RoundedRectangle::getTransform() };
 	applyChanges(transform);
 	return transform;
 }

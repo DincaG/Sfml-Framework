@@ -1,10 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "RoundedRectangleShape.h"
+#include "RoundedRectangle.h"
 #include "Visible.h"
 #include <iostream>
 
-class DynamicObject : public RoundedRectangleShape, virtual public Visible
+class DynamicObject : public RoundedRectangle, virtual public Visible
 {
 public:
 
