@@ -21,7 +21,7 @@ void RoundedRectangle::setCornerRadius(float radius)
     update();
 }
 
-void RoundedRectangle::setCornerPointCount(std::size_t count)
+void RoundedRectangle::setPointCount(std::size_t count)
 {
     this->cornerPointCount = count;
     update();

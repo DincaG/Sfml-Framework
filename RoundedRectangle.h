@@ -9,7 +9,7 @@ public:
     explicit RoundedRectangle(const sf::Vector2f& size = sf::Vector2f(0, 0), float radius = 0, std::size_t cornerPointCount = 10);
     void setSize(const sf::Vector2f& size);
     void setCornerRadius(float radius);
-    void setCornerPointCount(std::size_t count);
+    void setPointCount(std::size_t count);
     const sf::Vector2f& getSize() const;
     float getCornerRadius() const;
     virtual std::size_t getPointCount() const;
