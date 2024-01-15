@@ -24,6 +24,8 @@ public:
     sf::FloatRect getTextLocalBounds() const;
     sf::FloatRect getTextGlobalBounds() const;
 
+    Scheduler taskManager;
+
 protected:
 
     virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;

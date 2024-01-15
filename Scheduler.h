@@ -14,6 +14,9 @@ public:
 	// Pushes itself into global schedulers' list
 	Scheduler();
 
+	// Copy constructor - does not copy
+	Scheduler(const Scheduler& scheduler);
+
 	// Cleans up all tasks and subsequent tasks
 	// Removes itself from global schedulers' list
 	~Scheduler();

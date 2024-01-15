@@ -9,6 +9,11 @@ Scheduler::Scheduler()
 	schedulers.push_back(this);
 }
 
+Scheduler::Scheduler(const Scheduler& scheduler)
+	: Scheduler()
+{
+}
+
 Scheduler::~Scheduler()
 {
 	// delete all tasks

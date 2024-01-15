@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "RoundedRectangle.h"
 #include "Visible.h"
+#include "Scheduler.h"
 #include <iostream>
 
 class DynamicObject : public RoundedRectangle, virtual public Visible
